@@ -4,6 +4,11 @@
   "description": "Open-source MCP (Model Context Protocol) server for the SharpSpring API, now branded Constant Contact Lead Gen & CRM. Lets AI agents and Claude read/write Leads and call any standard SharpSpring API method.",
   "type": "module",
   "license": "MIT",
+  "mcpName": "io.github.boyddriesen/sharpspring-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/boyddriesen/sharpspring-mcp-server.git"
+  },
   "keywords": [
     "mcp",
     "mcp-server",

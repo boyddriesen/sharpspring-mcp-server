@@ -32,7 +32,24 @@ SHARPSPRING_API_VERSION=v1.2
 
 ### Using with an MCP client
 
-Add to your MCP client config (e.g. Claude Desktop's `claude_desktop_config.json`), pointing at the built server and passing credentials as environment variables — never commit these:
+Once published to npm, you can run it directly with `npx` — no local clone needed:
+
+```json
+{
+  "mcpServers": {
+    "sharpspring": {
+      "command": "npx",
+      "args": ["-y", "sharpspring-mcp-server"],
+      "env": {
+        "SHARPSPRING_ACCOUNT_ID": "your-account-id",
+        "SHARPSPRING_SECRET_KEY": "your-secret-key"
+      }
+    }
+  }
+}
+```
+
+Or, running from a local clone/build, point at the built entry point instead:
 
 ```json
 {
@@ -48,6 +65,8 @@ Add to your MCP client config (e.g. Claude Desktop's `claude_desktop_config.json
   }
 }
 ```
+
+Never commit real credentials — pass them as environment variables as shown above.
 
 ## Tools
 

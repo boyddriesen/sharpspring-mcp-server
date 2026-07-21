@@ -1,0 +1,43 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.boyddriesen/sharpspring-mcp-server",
+  "description": "Open-source MCP server for the SharpSpring API (Constant Contact Lead Gen & CRM). Read/write Leads, discover custom fields, and call any standard SharpSpring API method.",
+  "repository": {
+    "url": "https://github.com/boyddriesen/sharpspring-mcp-server",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "sharpspring-mcp-server",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "SHARPSPRING_ACCOUNT_ID",
+          "description": "Your SharpSpring account ID, generated under API Keys in your SharpSpring account.",
+          "isRequired": true,
+          "isSecret": false,
+          "format": "string"
+        },
+        {
+          "name": "SHARPSPRING_SECRET_KEY",
+          "description": "Your SharpSpring secret key, generated under API Keys in your SharpSpring account.",
+          "isRequired": true,
+          "isSecret": true,
+          "format": "string"
+        },
+        {
+          "name": "SHARPSPRING_API_VERSION",
+          "description": "Optional. SharpSpring API version to use: v1.2 (UTC timestamps, default) or v1 (timestamps follow the account's Company Profile timezone).",
+          "isRequired": false,
+          "isSecret": false,
+          "format": "string"
+        }
+      ]
+    }
+  ]
+}
