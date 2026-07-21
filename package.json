@@ -1,0 +1,36 @@
+{
+  "name": "sharpspring-mcp-server",
+  "version": "0.1.0",
+  "description": "Open-source MCP (Model Context Protocol) server for the SharpSpring API, now branded Constant Contact Lead Gen & CRM. Lets AI agents and Claude read/write Leads and call any standard SharpSpring API method.",
+  "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "sharpspring",
+    "constant-contact",
+    "constant-contact-lead-gen-and-crm",
+    "crm",
+    "marketing-automation",
+    "claude"
+  ],
+  "bin": {
+    "sharpspring-mcp-server": "./build/index.js"
+  },
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "build": "tsc && chmod +x build/index.js",
+    "dev": "tsc --watch"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.2",
+    "typescript": "^5.5.2"
+  }
+}
